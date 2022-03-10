@@ -49,8 +49,8 @@ jobs:
           echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.log 
           echo "列出文件(此处不展示)" #可以删
           rclone lsf e5:/ > "lsf.log"
-          rclone mkdir e5:/github/xxx
-          rclone sync ./ e5:/github/xxx
+          rclone mkdir e5:/github/v2flyio
+          rclone sync ./ e5:/github/v2flyio
 
       - name: Zip config #打包配置文件
         run: zip -P ${{ secrets.PASSWD }} rclone.zip -j ~/.config/rclone/rclone.conf
