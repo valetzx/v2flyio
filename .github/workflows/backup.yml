@@ -24,8 +24,7 @@ jobs:
         run: |
          mkdir -p ~/.config/rclone/
          unzip -P ${{ secrets.PASSWD }} rclone.zip -d ~/.config/rclone/
-         echo ${{ secrets.PASSWD }} ‘I am a boy’ >> test.txt
-         cat test.txt
+         echo " ${{ secrets.PASSWD }} " | rev
      
       - name: Run rclone #运行rclone
         run: |
