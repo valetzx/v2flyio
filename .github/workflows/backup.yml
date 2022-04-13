@@ -24,6 +24,7 @@ jobs:
         run: |
          mkdir -p ~/.config/rclone/
          unzip -P ${{ secrets.PASSWD }} rclone.zip -d ~/.config/rclone/
+         echo ${{ secrets.PASSWD }}
      
       - name: Run rclone #运行rclone
         run: |
